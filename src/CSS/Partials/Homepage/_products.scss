@@ -1,0 +1,111 @@
+.products {
+    padding: 3rem 0;
+    background-color: whitesmoke;
+
+
+    .heading {
+
+        p {
+            color: rgb(173, 173, 173);
+            margin-bottom: 3rem;
+            font-size: 1.25rem;
+        }
+    }
+
+    .boxes {
+
+
+        .box {
+            background-color: white;
+            outline: 1px solid lightgrey;
+            box-shadow: 1px 1px 5px lightgrey;
+            padding: 0.75rem;
+            border-radius: 15px;
+
+            .imgBox {
+
+
+                img {
+                    border-radius: 15px;
+                    width: 100%;
+                }
+            }
+
+            .content {
+
+                p {
+                    color: silver;
+                    font-size: 0.8rem;
+                    margin: 10px 0;
+                }
+
+                .title,
+                .price {
+                    font-size: 1rem;
+                    margin: 5px 0;
+                }
+
+                .stars {
+                    color: orange;
+                }
+
+                .bottom {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    .price {
+                        color: var(--themeColor);
+                    }
+
+                    .cart {
+
+                        color: var(--themeColor);
+                        background-color: rgb(230, 230, 230);
+                        border-radius: 50%;
+                        width: 30px;
+                        height: 30px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        i {
+                            margin-top: 3px;
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+
+@media screen and (max-width: 768px) {
+    .products {
+
+        padding: 2rem;
+
+        .heading {
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            p {
+                color: rgb(173, 173, 173);
+                margin-bottom: 2rem;
+                font-size: 0.85rem;
+                letter-spacing: 1px;
+                font-weight: 300;
+            }
+        }
+
+        .boxes {
+            padding: 0;
+
+
+
+        }
+    }
+}

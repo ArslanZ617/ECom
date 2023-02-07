@@ -1,0 +1,165 @@
+.banners {
+
+    padding: 3rem 0;
+
+    .imgBox {
+        position: relative;
+        background-color: red;
+        height: 350px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .content {
+        position: absolute;
+        top: 50%;
+        left: 5%;
+        transform: translateY(-50%);
+
+        h2,
+        h5,
+        p {
+            color: white;
+            margin: 10px 0;
+            letter-spacing: 0.5px;
+        }
+
+        h5 {
+            font-size: 1.2rem;
+        }
+
+        p {
+            font-size: 1.5rem;
+        }
+
+
+        button {
+            padding: 0.5rem 1.25rem;
+            color: white;
+            margin-top: 0.75rem;
+            background-color: transparent;
+            border: 1px solid white;
+
+            &.outlined {
+
+                &:hover {
+                    color: var(--headingColor);
+                    background-color: white;
+                }
+            }
+
+            &.solid {
+
+                &:hover {
+                    border: 1px solid var(--themeColor);
+                    background-color: var(--themeColor);
+                }
+            }
+
+        }
+    }
+
+    .textAction {
+        margin-top: 1rem;
+
+        .imgBox {
+            height: 220px;
+            overflow: hidden;
+
+            &:hover img {
+                transform: scale(1.1);
+            }
+        }
+
+        .content {
+
+            h2 {
+                font-size: 1.65rem;
+            }
+
+            h5 {
+                color: rgb(199, 46, 46);
+            }
+
+            button {
+                display: none;
+            }
+        }
+    }
+
+}
+
+
+@media screen and (max-width: 768px) {
+    .banners {
+        padding: 2rem;
+
+        .col- {
+            padding: 0;
+        }
+
+        .imgBox {
+            height: 220px;
+        }
+
+        .content {
+            text-align: center;
+            left: 8%;
+
+            h2,
+            h5,
+            p {
+                color: white;
+                margin: 1px 0;
+                letter-spacing: 0;
+            }
+
+            h5,
+            p,
+            button {
+                font-size: 0.9rem;
+            }
+
+            button {
+                padding: 0.25rem 0.75rem;
+                margin-top: 0.5rem;
+
+                &.outlined {
+                    color: var(--headingColor);
+                    background-color: white;
+                }
+
+                &.solid {
+                    border: 1px solid var(--themeColor);
+                    background-color: var(--themeColor);
+                }
+
+            }
+        }
+
+        .textAction {
+
+            .imgBox {
+                height: 150px;
+            }
+
+            .content {
+                text-align: center;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                white-space: pre;
+
+                h2 {
+                    font-size: 1.15rem;
+                }
+
+            }
+        }
+
+    }
+}

@@ -1,0 +1,195 @@
+.Navbar {
+    box-shadow: 1px 1px 5px grey;
+    background-color: whitesmoke;
+    padding: 0.5rem 0;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+
+        img {
+            width: 20%;
+        }
+    }
+
+    .links {
+
+        ul {
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            li {
+                list-style: none;
+
+                .navItem {
+                    text-decoration: none;
+                    color: var(--textColor);
+                    padding: 0.75rem 0.25rem;
+                    margin: 0px 0.75rem;
+                    font-size: 0.9rem;
+                    position: relative;
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        bottom: 0;
+                        right: 0%;
+                        height: 3px;
+                        width: 0;
+                        background-color: var(--themeColor);
+                        transition: 0.3s all;
+                    }
+
+                    &.active::before, &.active{
+                        color: var(--themeColor);
+                        font-weight: 600;
+                        width: 100%;
+                        left: 0%;
+                    }
+
+                    &:hover {
+                        color: var(--themeColor);
+                    }
+                }
+            }
+        }
+
+        .cart {
+            color: var(--textColor);
+            position: relative;
+
+            &:hover {
+                color: var(--reactColor);
+
+            }
+        }
+
+        .msgs {
+            position: absolute;
+            top: -15%;
+            right: -30%;
+            color: white;
+            min-width: 12px;
+            font-size: 0.5rem;
+            padding: 0.015rem 0.135rem;
+            text-align: center;
+            border-radius: 3px;
+            background-color: red;
+            display: none;
+
+            &.show {
+                display: block;
+            }
+
+        }
+
+        .icon {
+            display: none;
+        }
+
+        input {
+            width: 30px;
+            margin-inline: 0.25rem;
+            background-color: transparent;
+            border: none;
+            text-align: center;
+        }
+
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .Navbar {
+        padding: 0.5rem 1rem;
+
+        .logo {
+
+            img {
+                width: 20%;
+            }
+        }
+
+        .links {
+            .navList {
+                padding: 10px 2rem;
+                flex-direction: column;
+                text-align: center;
+                width: 100%;
+                position: absolute;
+                top: 100%;
+                left: -100%;
+                background-color: var(--headingColor);
+                transition: 0.5s all;
+                opacity: 0;
+
+                &.activeNav {
+                    transform: translateX(100%);
+                    opacity: 1;
+                }
+
+                li {
+                    padding: 0.75rem;
+                    width: 100%;
+                    border-bottom: 0.25px solid var(--brdrWColor);
+
+                    &:last-child {
+                        border: none;
+                    }
+
+                    .navItem {
+                        color: var(--darkColor);
+                        
+                        &::before {
+                            display: none;
+                        }
+
+                    }
+                }
+            }
+
+            .cart {
+                font-size: 1.5rem;
+
+                &:hover {
+                    color: var(--reactColor);
+                }
+
+                .msgs {
+                    top: -3%;
+                    right: -15%;
+                }
+            }
+
+            .icon {
+                font-size: 1.5rem;
+                display: block;
+                transform: scaleX(-1);
+
+                &.iconTurn {
+                    transform: scaleX(1);
+
+                }
+
+            }
+
+            input {
+                width: 30px;
+                margin-inline: 0.25rem;
+                background-color: transparent;
+                border: none;
+                text-align: center;
+            }
+
+        }
+    }
+}

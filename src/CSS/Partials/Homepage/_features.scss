@@ -1,0 +1,52 @@
+.features {
+    padding: 3rem 0;
+    
+    .featureImgs {
+
+        .box {
+            border: 0.25px solid lightgrey;
+            border-radius: 3px;
+            box-shadow: 0px 0px 10px lightgrey;
+            padding: 20px;
+            text-align: center;
+            cursor: pointer;
+
+            &:hover {
+                background-color: lightgray;
+            }
+
+
+            img {
+                width: 100%;
+                margin-bottom: 0.5rem;
+
+            }
+
+            h6 {
+                color: #088178;
+                font-size: 0.75rem;
+                text-align: center;
+                display: inline-block;
+                padding: 0.45rem 0.75rem;
+                border-radius: 3px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .features {
+        padding: 2rem;
+
+        .featureImgs {
+            .boxes {
+                padding: 0;
+            }
+
+            .box {
+                border-radius: 8px;
+                box-shadow: none;
+            }
+        }
+    }
+}

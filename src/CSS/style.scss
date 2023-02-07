@@ -1,0 +1,106 @@
+:root {
+    --textColor: rgb(60, 60, 60);
+    --brdrColor: rgba(60, 60, 60, 0.5);
+    --brdrWColor: rgba(255, 255, 255, 0.125);
+    --darkColor: rgba(255, 255, 255, 0.75);
+    --headingColor: rgb(30, 30, 30);
+    --headingSize: 2rem;
+    --textSize: 0.95rem;
+    --btnColor: rgb(0, 190, 0);
+    --btnHoverColor: rgb(0, 128, 0);
+    --reactColor: #0094b9;
+    --themeColor: #088178;
+    --themeDKColor: #00645e;
+}
+
+* {
+    font-family: 'league spartan';
+    margin: 0;
+    padding: 0;
+    transition: 0.3s all;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--headingColor);
+    font-weight: 700;
+}
+
+
+
+.bttn {
+    padding: 0.35rem 0.75rem;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--themeColor);
+    color: white;
+
+    &:hover {
+        background-color: var(--themeDKColor);
+    }
+}
+
+
+.pagination {
+    margin-top: 3rem;
+    justify-content: center;
+    gap: 10px;
+
+    .page-link:focus{
+        box-shadow: none !important;
+    }
+
+
+    .page-link.num {
+        width: 35px;
+        text-align: center;
+    }
+
+    button {
+        width: 40px;
+        height: 40px;
+        padding: 8px;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-weight: 500;
+        background-color: var(--themeColor);
+
+        &:hover {
+            background-color: var(--themeDKColor);
+
+        }
+    }
+}
+
+
+@import './Partials/navbar';
+@import './Partials/footer';
+
+// Home Page CSS
+@import './Partials/Homepage/home';
+@import './Partials/Homepage/features';
+@import './Partials/Homepage/products';
+@import './Partials/Homepage/repairBanner';
+@import './Partials/Homepage/banners';
+@import './Partials/Homepage/newsletter';
+
+// Shop Page CSS
+@import './Partials/Shoppage/heroSec';
+@import './Partials/Shoppage/shopPro';
+
+// Blog Page CSS
+@import './Partials/Blog/blog';
+
+// About Page CSS
+@import './Partials/About/about';
+
+// Contact us Page CSS
+@import './Partials/Contact/contactus';
+
+// Cart Page CSS
+@import './Partials/Cart/cart';

@@ -1,0 +1,161 @@
+.shopPro {
+    background-color: whitesmoke;
+}
+
+.proDetails {
+    padding: 6rem 0 3rem;
+
+    .row {
+        align-items: center;
+    }
+
+    .imageSec {
+
+        .col {
+            padding: 0;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        .smallImgs {
+            gap: 0.35rem;
+        }
+
+    }
+
+    .content {
+
+
+        h2,
+        h4,
+        h6 {
+            margin: 1rem 0;
+        }
+
+        .selection {
+
+            .selectPanel:focus {
+                outline: none;
+            }
+        }
+
+
+        form {
+
+            .cart {
+                display: flex;
+                gap: 5px;
+                margin: 10px 0;
+
+                input,
+                .button {
+                    border: 1px solid grey;
+                    width: 40px;
+                    text-align: center;
+                    padding: 5px;
+                    background-color: #fff;
+                    font-weight: 700;
+                    color: var(--themeColor);
+                }
+            }
+
+            input[type=submit] {
+                padding: 0.35rem 1.55rem;
+                background-color: var(--themeColor);
+                border: none;
+                color: white;
+                font-weight: 500;
+                border-radius: 5px;
+
+            }
+        }
+
+        .details {
+            margin: 2rem 0;
+
+            p {
+                color: var(--textColor);
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .proDetails {
+        padding: 2rem;
+        padding-top: 6rem;
+
+        .row {
+            align-items: center;
+        }
+
+        .imageSec {
+
+            .col {
+                padding: 0;
+            }
+
+            img {
+                width: 100%;
+            }
+
+            .smallImgs {
+                gap: 0.35rem;
+            }
+
+        }
+
+        .col-md-6:has(.content){
+            padding: 0;
+        }
+
+        .content {
+            text-align: center;
+
+            h2,
+            h4,
+            h6 {
+                margin: 0.75rem 0;
+            }
+
+            h4{
+                color: var(--themeColor);
+            }
+
+            .selection {
+
+                .selectPanel:focus {
+                    outline: none;
+                }
+            }
+
+
+            form {
+                
+                .cart {
+                    justify-content: center;
+                }
+
+                input[type=submit] {
+                    padding: 0.25rem 1rem;
+                }
+            }
+
+            .details {
+                margin: 2rem 0 0;
+
+                h3{
+                    color: var(--themeColor)
+                }
+
+                p {
+                    text-align: justify;
+                    margin: 0;
+                }
+            }
+        }
+    }
+}

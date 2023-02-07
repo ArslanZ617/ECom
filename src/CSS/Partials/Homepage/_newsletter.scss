@@ -1,0 +1,98 @@
+.newsletter {
+    padding: 2rem 0;
+    background-color: rgb(26, 26, 61);
+    overflow: hidden;
+    position: relative;
+
+    .pattern {
+        position: absolute;
+        top: -70%;
+        left: 10%;
+
+    }
+
+    .row {
+        justify-content: space-between;
+        align-items: center;
+
+        .content {
+
+            h2 {
+                color: white;
+            }
+
+            p {
+                color: rgb(179, 179, 179);
+                letter-spacing: 1px;
+                margin: 0;
+
+                span {
+                    color: rgb(238, 163, 0);
+                }
+            }
+        }
+
+        .form {
+            display: flex;
+            justify-content: flex-end;
+
+            input {
+                padding: 0.75rem;
+                width: 65%;
+                border-radius: 5px 0 0 5px;
+                border: none;
+
+                &:focus {
+                    outline: none;
+                }
+            }
+
+
+            button {
+                background-color: var(--themeColor);
+                color: white;
+                padding: 0 1.5rem;
+                border: none;
+                border-radius: 0 5px 5px 0;
+
+                &:hover{
+                    background-color: var(--themeDKColor);
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .newsletter {
+        padding: 2rem;
+
+        .row {
+            text-align: center;
+
+            .content {
+
+                p {
+                    line-height: 1;
+                    margin-bottom: 1rem;
+                }
+            }
+
+            .form {
+                justify-content: center;
+
+                input {
+                    padding: 0.5rem 0.65rem;
+                    width: 70%;
+                }
+
+                button {
+                    padding: 0.5rem;
+                    font-size: 0.9rem;
+                }
+            }
+        }
+    }
+
+}

@@ -1,0 +1,146 @@
+.cart {
+
+
+    .tableCart {
+        padding: 2rem 0;
+
+        .header {
+            border-block: 1px solid silver;
+        }
+
+        .tableBody {
+            color: var(--textColor);
+
+            td,
+            th {
+                vertical-align: middle;
+
+                &.title {
+                    color: var(--themeColor);
+                    font-weight: 500;
+                }
+            }
+
+            i {
+                cursor: pointer;
+                color: var(--themeColor);
+            }
+
+            input {
+                text-align: center;
+                padding: 2px;
+                border-radius: 5px;
+                border: 2px solid grey;
+
+            }
+        }
+    }
+
+    .coupon {
+        padding: 2rem 0;
+
+        button {
+            background-color: var(--themeColor);
+            border: none;
+            color: white;
+
+            &:hover {
+                background-color: var(--themeDKColor);
+            }
+        }
+
+        .apply {
+
+            input,
+            button {
+                padding: 0.25rem 0.75rem;
+                border-radius: 3px;
+            }
+
+            input {
+                border: 1px solid grey;
+                width: 50%;
+
+                &:focus {
+                    outline: none;
+                }
+            }
+
+
+            button {
+                margin-left: 0.5rem;
+            }
+        }
+
+        .details {
+            padding: 2rem;
+            border: 1px solid silver;
+            border-radius: 5px;
+
+
+            table {
+
+                th,
+                td {
+                    width: 50%;
+                    padding: 0.25rem 0.5rem;
+                }
+            }
+
+            button {
+                padding: 0.35rem 1rem;
+                border-radius: 3px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .cart {
+
+        .tableCart {
+            padding: 1.5rem;
+
+            .container {
+                overflow-x: auto;
+                padding: 0;
+            }
+
+            .tableBody {
+                border-bottom: 1px dashed silver;
+
+                &:last-child {
+                    border-bottom: none;
+                }
+
+            }
+        }
+
+        .coupon {
+            padding: 1rem;
+            text-align: center;
+            border-top: 1px dashed silver;
+            .apply {
+
+                input {
+                    width: 70%;
+                }
+
+
+                button {
+                    margin-left: 0.25rem;
+                }
+            }
+
+            .details {
+                margin-top: 1rem;
+                padding: 1rem;
+
+                button {
+                    padding: 0.25rem 0.75rem;
+                }
+            }
+        }
+    }
+}
